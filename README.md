@@ -59,14 +59,10 @@ However, such a high repeat rate may also suggest slowing new customer acquisiti
 - Leverage strong retention by introducing subscription or replenishment models for frequently purchased products
 - Use high-LTV repeat customers in lookalike audiences to scale acquisition efficiently
 
-### Insight 1 – Instagram and TikTok are the strongest conversion drivers within Paid Social
+### Insight 2 – Instagram and TikTok are the strongest conversion drivers within Paid Social
 Among paid social channels, Instagram (20.6% CVR) and TikTok (17.2% CVR) significantly outperform Facebook (11.3%).
 This indicates that newer, more visual platforms are more effective at converting traffic, not just driving volume.
 ### Recommendation:
 - Reallocate budget from Facebook → Instagram & TikTok
 - Scale high-performing creatives on these platforms
 - Use TikTok/Instagram as primary conversion channels, not just awareness
-
-## Next Steps
-- Incorporate real-world data sources (e.g. Shopify API, GA4 exports)
-- Design A/B test for new product offering
