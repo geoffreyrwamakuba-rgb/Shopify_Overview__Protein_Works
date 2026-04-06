@@ -51,20 +51,21 @@ Advanced SQL techniques used:
 - Null handling and defensive calculations (NULLIF, COALESCE)
 
 ## Key Insights & Recommendations
-### Insight 1 – MRR Growth Is Driven More by Expansion Than New Sales
-- Across most months, Expansion MRR > New MRR.
-- Existing customers are increasing seats or upgrading plans.
-- Customer Success and product experience are strong expansion drivers.
-### Recommendation – Double down on expansion motions
-- Identify features correlated with expansion (e.g., corporate cards, reimbursement workflows (Uber & Deliveroo)).
-- Implement “adoption nudges” for companies with <60% seat activation.
-### Insight 2 – Significant Drop in Retention after the first year
-- Strong onboarding but weak customer loyalty
-- Competitors may be pulling customers away
-### Recommendation – Differentiate products and track customers 
-- Expand offering (audit automation or AI receipt extraction)
-- Improve UX — expense tools with poor UX churn the fastest
-- Create engagement triggers for low-activity or recently contracted accounts
+### Insight 1 – Returning customer rate is exceptionally high (93% in 2025, +33% YoY)
+The business shows very strong customer retention, with returning customers making up the vast majority of the customer base in 2025. This indicates high product satisfaction and strong repeat purchase behaviour.
+However, such a high repeat rate may also suggest slowing new customer acquisition, which could limit future growth.
+### Recommendation:
+- Invest in new customer acquisition channels (paid social, influencer, partnerships) to rebalance growth
+- Leverage strong retention by introducing subscription or replenishment models for frequently purchased products
+- Use high-LTV repeat customers in lookalike audiences to scale acquisition efficiently
+
+### Insight 1 – Instagram and TikTok are the strongest conversion drivers within Paid Social
+Among paid social channels, Instagram (20.6% CVR) and TikTok (17.2% CVR) significantly outperform Facebook (11.3%).
+This indicates that newer, more visual platforms are more effective at converting traffic, not just driving volume.
+### Recommendation:
+- Reallocate budget from Facebook → Instagram & TikTok
+- Scale high-performing creatives on these platforms
+- Use TikTok/Instagram as primary conversion channels, not just awareness
 
 ## Next Steps
 - Incorporate real-world data sources (e.g. Shopify API, GA4 exports)
