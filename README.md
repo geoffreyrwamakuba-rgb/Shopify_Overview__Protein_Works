@@ -1,2 +1,68 @@
-# Shopify-Overview---Protein-Works
-In this project I create a dashboard to assess DTC business health.
+# Shopify-Overview - Protein-Works
+
+## Executive Summary
+The dashboard provides a high-level overview of revenue, profitability, customer behaviour, and marketing efficiency, enabling stakeholders to quickly identify growth drivers and optimisation opportunities.
+
+Tools Used: SQL, Python, Tableau
+
+Data Sources: Data model based on Shopify, Google Analytics 4, Facebook Ads, Instagram & TikTok Analytics schemas. All data is synthetic.
+
+## Dashboard
+![alt text](https://github.com/geoffreyrwamakuba-rgb/Revenue-Churn-Analysis-for-a-SaaS-Fintech/blob/main/Dashboard%20Image.png?raw=true)
+
+## Business Problem
+Expense management platforms face several challenges:
+- Understanding Expansion & Contraction Drivers
+- Predicting Churn Before Revenue Loss
+- Forecasting Revenue Accurately
+  
+## Methodology
+### Data Source
+Python was used to generate two datasets:
+-	Accounts (customer profile, signup, churn, industry, seats)
+-	Subscriptions (monthly MRR per account)
+The model simulates 3 years of realistic behaviour based on patterns observed in real expense platforms (e.g., Ramp, Brex):
+
+#### Assumptions Built Into the Data Generation include:
+-	Churn Probability
+-	Expansion Behaviour
+-	Contraction Events & Plan upgrades
+
+### SQL Analysis
+**Generated SQL queries to calculate:**
+- MRR Movements - Using LAG() to compare monthly MRR per account:
+  - New, Expansion, Contraction & Churn MRR
+- Quarterly Cohort Table - Cohorts grouped by signup quarter with:
+  - Retained flags
+  - Quarter-by-quarter activity
+- Net Revenue Retention (NRR)
+- Churn Rate
+- Expansion MRR %
+
+## Skills Demonstrated
+- Advanced SQL (CTEs, window functions, views, constraints, indexing)
+- Python (data generation with realistic assumptions)
+- Tableau (dashboard design, KPIs, multi-chart layouts)
+- SaaS metric interpretation (NRR, churn, expansion, cohorts)
+
+## Key Insights & Recommendations
+### Insight 1 – MRR Growth Is Driven More by Expansion Than New Sales
+- Across most months, Expansion MRR > New MRR.
+- Existing customers are increasing seats or upgrading plans.
+- Customer Success and product experience are strong expansion drivers.
+### Recommendation – Double down on expansion motions
+- Identify features correlated with expansion (e.g., corporate cards, reimbursement workflows (Uber & Deliveroo)).
+- Implement “adoption nudges” for companies with <60% seat activation.
+### Insight 2 – Significant Drop in Retention after the first year
+- Strong onboarding but weak customer loyalty
+- Competitors may be pulling customers away
+### Recommendation – Differentiate products and track customers 
+- Expand offering (audit automation or AI receipt extraction)
+- Improve UX — expense tools with poor UX churn the fastest
+- Create engagement triggers for low-activity or recently contracted accounts
+
+## Next Steps
+Strategic Enhancements
+- Add **Customer Acquisition Cost** (CAC) data and calculate **LTV/CAC**
+- Compare retention across industries to heighten focus
+- Design A/B test for new product offering
