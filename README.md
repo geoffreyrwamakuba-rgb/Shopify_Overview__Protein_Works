@@ -11,39 +11,44 @@ Data Sources: Data model based on Shopify, Google Analytics 4, Facebook Ads, Ins
 ![alt text](https://github.com/geoffreyrwamakuba-rgb/Revenue-Churn-Analysis-for-a-SaaS-Fintech/blob/main/Dashboard%20Image.png?raw=true)
 
 ## Business Problem
-Expense management platforms face several challenges:
-- Understanding Expansion & Contraction Drivers
-- Predicting Churn Before Revenue Loss
-- Forecasting Revenue Accurately
+DTC ecommerce platforms face several key challenges:
+- Understanding whether growth is driven by new customer acquisition or repeat purchasing
+- Measuring the efficiency of marketing spend across channels
+- Identifying which products and categories drive profitability
+- Consolidating fragmented data across marketing and sales into a single source of truth
   
 ## Methodology
 ### Data Source
-Python was used to generate two datasets:
--	Accounts (customer profile, signup, churn, industry, seats)
--	Subscriptions (monthly MRR per account)
-The model simulates 3 years of realistic behaviour based on patterns observed in real expense platforms (e.g., Ramp, Brex):
+Python was used to generate realistic synthetic datasets
+The data model is based on schemas from:
+- Shopify (orders, products, customers)
+- Google Analytics 4 (sessions, traffic sources)
+- Facebook Ads, Instagram, and TikTok (campaign performance)
+- The dataset includes 50k+ orders
 
-#### Assumptions Built Into the Data Generation include:
--	Churn Probability
--	Expansion Behaviour
--	Contraction Events & Plan upgrades
+The data is structured using a star schema:
+- Fact tables: orders, line items, sessions, ad spend
+- Dimension tables: customer, product, channel, campaign, date
+
+Realism was introduced through Seasonality trends in demand and spend & Conversion rates tied to traffic sources
+
+[Insert data model image here]
 
 ### SQL Analysis
-**Generated SQL queries to calculate:**
-- MRR Movements - Using LAG() to compare monthly MRR per account:
-  - New, Expansion, Contraction & Churn MRR
-- Quarterly Cohort Table - Cohorts grouped by signup quarter with:
-  - Retained flags
-  - Quarter-by-quarter activity
-- Net Revenue Retention (NRR)
-- Churn Rate
-- Expansion MRR %
+SQL was used to transform raw data into analytics-ready tables powering the dashboard.
 
-## Skills Demonstrated
-- Advanced SQL (CTEs, window functions, views, constraints, indexing)
-- Python (data generation with realistic assumptions)
-- Tableau (dashboard design, KPIs, multi-chart layouts)
-- SaaS metric interpretation (NRR, churn, expansion, cohorts)
+Key transformations include:
+- Creation of daily KPI tables (revenue, profit, AOV, conversion rate)
+- Channel and traffic source performance (sessions, orders, CVR)
+- Product and category aggregations (revenue, profit, rankings)
+- Customer metrics (repeat rate, repurchase time, retention)
+- Marketing efficiency metrics (LTV, CAC, ROAS)
+
+Advanced SQL techniques used:
+- CTEs for modular transformations
+- Window functions (e.g. LAG, DENSE_RANK) for YoY analysis and ranking
+- Joins across fact and dimension tables
+- Null handling and defensive calculations (NULLIF, COALESCE)
 
 ## Key Insights & Recommendations
 ### Insight 1 – MRR Growth Is Driven More by Expansion Than New Sales
@@ -62,7 +67,5 @@ The model simulates 3 years of realistic behaviour based on patterns observed in
 - Create engagement triggers for low-activity or recently contracted accounts
 
 ## Next Steps
-Strategic Enhancements
-- Add **Customer Acquisition Cost** (CAC) data and calculate **LTV/CAC**
-- Compare retention across industries to heighten focus
+- Incorporate real-world data sources (e.g. Shopify API, GA4 exports)
 - Design A/B test for new product offering
