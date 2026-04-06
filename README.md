@@ -1,4 +1,4 @@
-# Shopify-Overview - Protein-Works
+# Shopify Overview - Protein Works
 
 ## Executive Summary
 The dashboard provides a high-level overview of revenue, profitability, customer behaviour, and marketing efficiency, enabling stakeholders to quickly identify growth drivers and optimisation opportunities.
