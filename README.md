@@ -32,7 +32,7 @@ The data is structured using a star schema:
 
 Realism was introduced through Seasonality trends in demand and spend & Conversion rates tied to traffic sources
 
-[Insert data model image here]
+![alt text](https://github.com/geoffreyrwamakuba-rgb/Shopify_Overview__Protein_Works/blob/main/Ecommerce_Data_Model.svg)
 
 ### SQL Analysis
 SQL was used to transform raw data into analytics-ready tables powering the dashboard.
